@@ -37,7 +37,12 @@ import { NotificationsProvider } from "./context/notifications"
 import { FeedbackProvider } from "./context/feedback"
 import { KiloEmbeddingModelsProvider } from "./context/kilo-embedding-models"
 import type { Message as SDKMessage, Part as SDKPart } from "@kilocode/sdk/v2"
+import { TabNav } from "./components/tools/TabNav"
+import { ToolsTab } from "./components/tools/ToolsTab"
+import { ConfigTab } from "./components/tools/ConfigTab"
+import type { LingInkTab } from "./types/tabs"
 import "./styles/chat.css"
+import "./styles/lingink-tabs.css"
 
 type ViewType = "newTask" | "history" | "profile" | "settings" | "subAgentViewer"
 const VALID_VIEWS = new Set<string>(["newTask", "history", "profile", "settings", "subAgentViewer"])
@@ -202,6 +207,7 @@ const AppContent: Component = () => {
   // race conditions with SettingsEditorProvider's navigate messages.
   const [migrationNeeded, setMigrationNeeded] = createSignal(false)
   const [migrationSource, setMigrationSource] = createSignal<"legacy" | "roo">("legacy")
+  const [linginkTab, setLinginkTab] = createSignal<LingInkTab>("chat")
   const session = useSession()
   const server = useServer()
   const vscode = useVSCode()
@@ -302,63 +308,74 @@ const AppContent: Component = () => {
 
   return (
     <div class="container">
-      {/* legacy-migration start — state-driven overlay, independent of currentView */}
-      <Show
-        when={migrationNeeded()}
-        fallback={
-          <Switch
+      {/* LingInk 3-Tab Navigation */}
+      <TabNav activeTab={linginkTab()} onTabChange={setLinginkTab} />
+
+      {/* Tab Content */}
+      <Switch fallback={<ToolsTab />}>
+        <Match when={linginkTab() === "chat"}>
+          {/* legacy-migration start — state-driven overlay, independent of currentView */}
+          <Show
+            when={migrationNeeded()}
             fallback={
-              <ChatView
-                continueInWorktree
-                onForkMessage={session.status() === "idle" ? handleForkMessage : undefined}
-                promptBoxId="sidebar:fallback"
-                emptyState={emptyState}
-              />
+              <Switch
+                fallback={
+                  <ChatView
+                    continueInWorktree
+                    onForkMessage={session.status() === "idle" ? handleForkMessage : undefined}
+                    promptBoxId="sidebar:fallback"
+                    emptyState={emptyState}
+                  />
+                }
+              >
+                <Match when={currentView() === "newTask"}>
+                  <ChatView
+                    onSelectSession={handleSelectSession}
+                    onShowHistory={() => setCurrentView("history")}
+                    onForkMessage={session.status() === "idle" ? handleForkMessage : undefined}
+                    continueInWorktree
+                    promptBoxId="sidebar:new-task"
+                    emptyState={emptyState}
+                  />
+                </Match>
+                <Match when={currentView() === "history"}>
+                  <HistoryView onSelectSession={handleSelectSession} onBack={() => setCurrentView("newTask")} />
+                </Match>
+                <Match when={currentView() === "profile"}>
+                  <ProfileView
+                    profileData={server.profileData()}
+                    deviceAuth={server.deviceAuth()}
+                    onLogin={server.startLogin}
+                  />
+                </Match>
+                <Match when={currentView() === "settings"}>
+                  <Settings
+                    tab={settingsTab()}
+                    onTabChange={setSettingsTab}
+                    onMigrationClick={(source) => {
+                      setMigrationSource(source)
+                      setMigrationNeeded(true)
+                    }}
+                  />
+                </Match>
+                <Match when={currentView() === "subAgentViewer"}>
+                  <ChatView readonly />
+                </Match>
+              </Switch>
             }
           >
-            <Match when={currentView() === "newTask"}>
-              <ChatView
-                onSelectSession={handleSelectSession}
-                onShowHistory={() => setCurrentView("history")}
-                onForkMessage={session.status() === "idle" ? handleForkMessage : undefined}
-                continueInWorktree
-                promptBoxId="sidebar:new-task"
-                emptyState={emptyState}
-              />
-            </Match>
-            <Match when={currentView() === "history"}>
-              <HistoryView onSelectSession={handleSelectSession} onBack={() => setCurrentView("newTask")} />
-            </Match>
-            <Match when={currentView() === "profile"}>
-              <ProfileView
-                profileData={server.profileData()}
-                deviceAuth={server.deviceAuth()}
-                onLogin={server.startLogin}
-              />
-            </Match>
-            <Match when={currentView() === "settings"}>
-              <Settings
-                tab={settingsTab()}
-                onTabChange={setSettingsTab}
-                onMigrationClick={(source) => {
-                  setMigrationSource(source)
-                  setMigrationNeeded(true)
-                }}
-              />
-            </Match>
-            <Match when={currentView() === "subAgentViewer"}>
-              <ChatView readonly />
-            </Match>
-          </Switch>
-        }
-      >
-        <MigrationWizard
-          source={migrationSource()}
-          onBack={() => setMigrationNeeded(false)}
-          onComplete={() => setMigrationNeeded(false)}
-        />
-      </Show>
-      {/* legacy-migration end */}
+            <MigrationWizard
+              source={migrationSource()}
+              onBack={() => setMigrationNeeded(false)}
+              onComplete={() => setMigrationNeeded(false)}
+            />
+          </Show>
+          {/* legacy-migration end */}
+        </Match>
+        <Match when={linginkTab() === "config"}>
+          <ConfigTab />
+        </Match>
+      </Switch>
     </div>
   )
 }

@@ -1,0 +1,87 @@
+/* LingInk 3-Tab Navigation — layered on top of Kilo's existing chat webview */
+
+.lingink-tab-nav {
+  display: flex;
+  background: #e8e2d6;
+  border-bottom: 1px solid #d8d0c4;
+  flex-shrink: 0;
+}
+.lingink-tab-nav button {
+  flex: 1;
+  padding: 10px 0;
+  border: none;
+  background: none;
+  font-size: 12px;
+  color: #8a8070;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.15s;
+}
+.lingink-tab-nav button:hover { color: #3a3226; }
+.lingink-tab-nav button.active { color: #3a3226; font-weight: 600; }
+.lingink-tab-nav button.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  right: 20%;
+  height: 2px;
+  background: #1E88E5;
+  border-radius: 1px;
+}
+.lingink-tab-nav button .lingink-tab-icon {
+  font-size: 14px;
+  display: block;
+  margin-bottom: 2px;
+}
+.lingink-tab-nav button .lingink-tab-label { font-size: 10px; }
+
+.lingink-tools-grid { padding: 12px; overflow-y: auto; }
+.lingink-tools-group { margin-bottom: 12px; }
+.lingink-group-title {
+  font-size: 11px; color: #8a8070;
+  margin-bottom: 6px; font-weight: 600;
+}
+.lingink-tools-row { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.lingink-tool-btn {
+  padding: 10px; border-radius: 6px;
+  background: #ffffff; cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.12s;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+.lingink-tool-btn:hover { border-color: #1E88E5; box-shadow: 0 2px 8px rgba(0,0,0,0.10); }
+.lingink-tb-icon { font-size: 16px; margin-bottom: 3px; display: block; }
+.lingink-tb-title { font-weight: 600; font-size: 11px; margin-bottom: 2px; }
+.lingink-tb-desc { font-size: 9px; color: #8a8070; }
+.lingink-tb-tag {
+  display: inline-block; font-size: 8px; padding: 1px 5px;
+  border-radius: 6px; background: #eee; color: #8a8070;
+  margin-top: 3px;
+}
+
+.lingink-model-config { padding: 12px; font-size: 12px; overflow-y: auto; }
+.lingink-mc-section {
+  background: #fff; border-radius: 6px; padding: 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08); margin-bottom: 10px;
+}
+.lingink-mc-section h4 { font-size: 11px; margin-bottom: 8px; color: #8a8070; }
+.lingink-mc-row { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; font-size: 11px; }
+.lingink-mc-row label { width: 80px; color: #8a8070; flex-shrink: 0; }
+.lingink-mc-row input, .lingink-mc-row select {
+  flex: 1; padding: 5px 8px; border: 1px solid #d8d0c4;
+  border-radius: 4px; font-size: 11px;
+}
+.lingink-mc-row input:focus { border-color: #1E88E5; outline: none; }
+.lingink-mc-status {
+  display: flex; align-items: center; gap: 4px;
+  font-size: 10px; color: #43a047; margin-top: 4px;
+}
+.lingink-mc-action {
+  display: block; width: 100%;
+  text-align: left; padding: 8px;
+  border: none; background: none;
+  cursor: pointer; border-radius: 4px;
+  font-size: 11px;
+}
+.lingink-mc-action:hover { background: #f0ece4; }
