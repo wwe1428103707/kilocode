@@ -1141,7 +1141,7 @@ export const dict = {
 
   "settings.experimental.title": "실험적",
   "settings.language.title": "언어",
-  "settings.aboutKiloCode.title": "Kilo Code 정보",
+  "settings.aboutKiloCode.title": "LingInk Agent 정보",
 
   "prompt.action.indexing": "인덱싱 설정",
   "settings.indexing.dimension.description": "비워두면 모델에서 임베딩 차원을 자동으로 감지합니다.",
@@ -1236,7 +1236,7 @@ export const dict = {
   "settings.aboutKiloCode.port.label": "포트:",
   "settings.aboutKiloCode.versionInfo": "버전 정보",
   "settings.aboutKiloCode.version.label": "버전:",
-  "settings.aboutKiloCode.extensionName": "Kilo Code 확장 프로그램",
+  "settings.aboutKiloCode.extensionName": "LingInk Agent 확장 프로그램",
   "settings.aboutKiloCode.community": "커뮤니티 및 지원",
   "settings.aboutKiloCode.feedback.prefix": "질문이나 피드백이 있으시면 다음에서 이슈를 열어주세요",
   "settings.aboutKiloCode.feedback.or": "또는",
@@ -1279,7 +1279,7 @@ export const dict = {
   "settings.browser.headless.title": "헤드리스 모드",
   "settings.browser.headless.description": "헤드리스 모드로 실행합니다 (브라우저 창이 표시되지 않음).",
 
-  "settings.language.description": 'Kilo Code UI의 언어를 선택하세요. "자동"은 VS Code 표시 언어를 사용합니다.',
+  "settings.language.description": 'LingInk Agent UI의 언어를 선택하세요. "자동"은 VS Code 표시 언어를 사용합니다.',
   "settings.language.auto": "자동 (VS Code 언어)",
   "settings.language.current": "현재:",
 
@@ -1566,7 +1566,7 @@ export const dict = {
   "settings.legacyMigration.link": "레거시 버전에서 마이그레이션",
   "settings.aboutKiloCode.legacyMigration.title": "레거시 마이그레이션",
   "settings.aboutKiloCode.legacyMigration.description":
-    "공급자 API 키 및 기본 모델을 포함하여 이전 Kilo Code 설치에서 설정을 마이그레이션합니다.",
+    "공급자 API 키 및 기본 모델을 포함하여 이전 LingInk Agent 설치에서 설정을 마이그레이션합니다.",
   "settings.aboutKiloCode.rooImport.description": "Roo Code 설치에서 대화 기록을 가져옵니다.",
   "settings.aboutKiloCode.rooImport.button": "Roo Code에서 세션 가져오기",
 

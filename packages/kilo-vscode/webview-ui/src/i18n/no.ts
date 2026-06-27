@@ -1112,7 +1112,7 @@ export const dict = {
   "deviceAuth.toast.codeCopied": "Kode kopiert til utklippstavlen",
   "deviceAuth.toast.errorCopied": "Feil kopiert til utklippstavlen",
   "deviceAuth.status.initiating": "Starter pålogging...",
-  "deviceAuth.title": "Logg inn på Kilo Code",
+  "deviceAuth.title": "Logg inn på LingInk Agent",
   "deviceAuth.step1": "Trinn 1: Åpne denne URLen",
   "deviceAuth.action.copyUrl": "Kopier URL",
   "deviceAuth.action.openBrowser": "Åpne nettleser",
@@ -1133,7 +1133,7 @@ export const dict = {
 
   "profile.title": "Profil",
   "profile.notLoggedIn": "Ikke pålogget",
-  "profile.action.login": "Logg inn med Kilo Code",
+  "profile.action.login": "Logg inn med LingInk Agent",
   "profile.balance.title": "Saldo",
   "profile.balance.refresh": "Oppdater saldo",
   "profile.action.dashboard": "Kontrollpanel",
@@ -1153,11 +1153,11 @@ export const dict = {
 
   "settings.experimental.title": "Eksperimentelt",
   "settings.language.title": "Språk",
-  "settings.aboutKiloCode.title": "Om Kilo Code",
+  "settings.aboutKiloCode.title": "Om LingInk Agent",
 
   "session.messages.empty": "Start en samtale ved å skrive en melding nedenfor.",
   "session.messages.welcome":
-    "Kilo Code er en AI-kodingsassistent. Be den om å bygge funksjoner, fikse feil eller forklare kodebasen din.",
+    "LingInk Agent er en AI-kodingsassistent. Be den om å bygge funksjoner, fikse feil eller forklare kodebasen din.",
   "session.messages.scrollToBottom": "Rull til bunnen",
   "session.messages.initializing": "Initialiserer...",
   "session.messages.taskStarting": "Starter...",
@@ -1586,12 +1586,12 @@ export const dict = {
   "settings.legacyMigration.link": "Migrer fra eldre versjon",
   "settings.aboutKiloCode.legacyMigration.title": "Migrering fra eldre versjon",
   "settings.aboutKiloCode.legacyMigration.description":
-    "Migrer innstillinger fra en tidligere installasjon av Kilo Code, inkludert API-nøkler for leverandører og standardmodell.",
+    "Migrer innstillinger fra en tidligere installasjon av LingInk Agent, inkludert API-nøkler for leverandører og standardmodell.",
   "settings.aboutKiloCode.rooImport.description": "Importer samtalehistorikk fra en installasjon av Roo Code.",
   "settings.aboutKiloCode.rooImport.button": "Importer økter fra Roo Code",
 
   // Screen 1 — What's New
-  "migration.whatsNew.title": "Hva er nytt i Kilo Code",
+  "migration.whatsNew.title": "Hva er nytt i LingInk Agent",
   "migration.whatsNew.subtitle": "Vi har bygget utvidelsen på nytt med et raskere og mer effektivt grunnlag.",
   "migration.whatsNew.features.performance.title": "Raskere agentytelse",
   "migration.whatsNew.features.performance.detail":

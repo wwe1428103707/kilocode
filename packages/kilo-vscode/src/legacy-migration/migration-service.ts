@@ -1,7 +1,7 @@
 /**
  * legacy-migration - Core migration service.
  *
- * Reads legacy Kilo Code v5.x data from VS Code SecretStorage and the extension's
+ * Reads legacy LingInk Agent v5.x data from VS Code SecretStorage and the extension's
  * global storage directory, then writes it to the new CLI backend via the SDK.
  */
 

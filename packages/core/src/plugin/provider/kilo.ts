@@ -26,7 +26,7 @@ export const KiloPlugin = PluginV2.define({
             // kilocode_change end
             provider.options.headers["HTTP-Referer"] = "https://kilo.ai/"
             // kilocode_change start
-            provider.options.headers["X-Title"] = "Kilo Code"
+            provider.options.headers["X-Title"] = "LingInk Agent"
             options.kilocodeToken = token ?? "anonymous"
             if (org) options.kilocodeOrganizationId = org
             if (!provider.enabled) provider.enabled = { via: "custom", data: { anonymous: true } }

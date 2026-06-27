@@ -1,0 +1,7 @@
+// lingink: LingInk Agent fork modification
+// Modified files:
+// - packages/kilo-vscode/package.json - Rebranded to LingInk Agent
+// - package.json - Rebranded to @lingink/agent
+// - packages/kilo-vscode/src/extension.ts - Agent registration
+// - packages/kilo-vscode/src/constants.ts - Brand constants
+// - packages/opencode/src/provider/provider.ts - Default model config

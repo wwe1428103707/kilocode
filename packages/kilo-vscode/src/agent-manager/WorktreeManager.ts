@@ -560,20 +560,20 @@ export class WorktreeManager {
     const gitDir = await this.resolveGitDir()
     const excludePath = path.join(gitDir, "info", "exclude")
     const items = [
-      [".kilo/worktrees/", "Kilo Code agent worktrees"],
+      [".kilo/worktrees/", "LingInk Agent agent worktrees"],
       [".kilo/agent-manager.json", "Kilo Agent Manager state"],
-      [".kilo/setup-script", "Kilo Code worktree setup script"],
-      [".kilo/setup-script.sh", "Kilo Code worktree setup script"],
-      [".kilo/setup-script.ps1", "Kilo Code worktree setup script"],
-      [".kilo/setup-script.cmd", "Kilo Code worktree setup script"],
-      [".kilo/setup-script.bat", "Kilo Code worktree setup script"],
-      [".kilocode/worktrees/", "Kilo Code legacy agent worktrees"],
+      [".kilo/setup-script", "LingInk Agent worktree setup script"],
+      [".kilo/setup-script.sh", "LingInk Agent worktree setup script"],
+      [".kilo/setup-script.ps1", "LingInk Agent worktree setup script"],
+      [".kilo/setup-script.cmd", "LingInk Agent worktree setup script"],
+      [".kilo/setup-script.bat", "LingInk Agent worktree setup script"],
+      [".kilocode/worktrees/", "LingInk Agent legacy agent worktrees"],
       [".kilocode/agent-manager.json", "Kilo Agent Manager legacy state"],
-      [".kilocode/setup-script", "Kilo Code legacy worktree setup script"],
-      [".kilocode/setup-script.sh", "Kilo Code legacy worktree setup script"],
-      [".kilocode/setup-script.ps1", "Kilo Code legacy worktree setup script"],
-      [".kilocode/setup-script.cmd", "Kilo Code legacy worktree setup script"],
-      [".kilocode/setup-script.bat", "Kilo Code legacy worktree setup script"],
+      [".kilocode/setup-script", "LingInk Agent legacy worktree setup script"],
+      [".kilocode/setup-script.sh", "LingInk Agent legacy worktree setup script"],
+      [".kilocode/setup-script.ps1", "LingInk Agent legacy worktree setup script"],
+      [".kilocode/setup-script.cmd", "LingInk Agent legacy worktree setup script"],
+      [".kilocode/setup-script.bat", "LingInk Agent legacy worktree setup script"],
     ] as const
 
     for (const [entry, comment] of items) {

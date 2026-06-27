@@ -36,7 +36,7 @@ const mainNavItems: NavItem[] = [
 ]
 
 const contributingItems: DropdownItem[] = [
-  { label: "Contributing Guide", href: "/contributing", description: "How to contribute to Kilo Code" },
+  { label: "Contributing Guide", href: "/contributing", description: "How to contribute to LingInk Agent" },
   {
     label: "Code of Conduct",
     href: "https://github.com/Kilo-Org/kilocode?tab=coc-ov-file",
@@ -284,7 +284,7 @@ export function TopNav({ onMobileMenuToggle, isMobileMenuOpen = false, showMobil
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 100 100"
             className="logo-icon"
-            aria-label="Kilo Code Logo"
+            aria-label="LingInk Agent Logo"
           >
             <path
               fill="currentColor"
@@ -292,7 +292,7 @@ export function TopNav({ onMobileMenuToggle, isMobileMenuOpen = false, showMobil
             />
           </svg>
           <div>
-            <span className="logo-text font-brand">Kilo Code</span>
+            <span className="logo-text font-brand">LingInk Agent</span>
             <span className="docs-label">DOCS</span>
           </div>
         </Link>
@@ -351,7 +351,7 @@ export function TopNav({ onMobileMenuToggle, isMobileMenuOpen = false, showMobil
       {/* Announcement banner */}
       <div className="announcement-banner">
         <p>
-          The all-new Kilo Code extension is here, rebuilt on the{" "}
+          The all-new LingInk Agent extension is here, rebuilt on the{" "}
           <Link href="/code-with-ai/platforms/vscode/whats-new">Kilo CLI</Link> for speed, flexibility, and continued
           access to 500+ models via the Kilo Gateway →
         </p>

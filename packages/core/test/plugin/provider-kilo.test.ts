@@ -37,7 +37,7 @@ describe("KiloPlugin", () => {
       expect((yield* catalog.provider.get(ProviderV2.ID.make("kilo"))).options.headers).toEqual({
         Existing: "value",
         "HTTP-Referer": "https://kilo.ai/",
-        "X-Title": "Kilo Code", // kilocode_change
+        "X-Title": "LingInk Agent", // kilocode_change
       })
       expect((yield* catalog.provider.get(ProviderV2.ID.openrouter)).options.headers).toEqual({})
     }),
@@ -61,7 +61,7 @@ describe("KiloPlugin", () => {
       const result = yield* catalog.provider.get(ProviderV2.ID.make("kilo"))
       expect(result.options.headers).toEqual({
         "HTTP-Referer": "https://kilo.ai/",
-        "X-Title": "Kilo Code", // kilocode_change
+        "X-Title": "LingInk Agent", // kilocode_change
       })
       expect(result.options.headers).not.toHaveProperty("http-referer")
       expect(result.options.headers).not.toHaveProperty("x-title")
@@ -92,7 +92,7 @@ describe("KiloPlugin", () => {
 
       expect((yield* catalog.provider.get(ProviderV2.ID.make("kilo"))).options.headers).toEqual({
         "HTTP-Referer": "https://kilo.ai/",
-        "X-Title": "Kilo Code", // kilocode_change
+        "X-Title": "LingInk Agent", // kilocode_change
       })
       expect((yield* catalog.provider.get(ProviderV2.ID.make("custom-kilo"))).options.headers).toEqual({})
     }),

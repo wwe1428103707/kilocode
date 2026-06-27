@@ -44,7 +44,7 @@ describe("LLMGatewayPlugin", () => {
       expect((yield* catalog.provider.get(ProviderV2.ID.make("llmgateway"))).options.headers).toEqual({
         Existing: "value",
         "HTTP-Referer": "https://kilo.ai/",
-        "X-Title": "Kilo Code",
+        "X-Title": "LingInk Agent",
         "X-Source": "kilo",
       })
       expect((yield* catalog.provider.get(ProviderV2.ID.openrouter)).options.headers).toEqual({})

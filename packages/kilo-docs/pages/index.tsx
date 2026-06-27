@@ -6,7 +6,7 @@ import Link from "next/link"
 const terminalContent = {
   installation: (
     <>
-      <span className="terminal-comment"># Install Kilo Code VS Code Extension</span>
+      <span className="terminal-comment"># Install LingInk Agent VS Code Extension</span>
       {"\n"}
       <span className="terminal-prompt">$</span> code --install-extension kilocode.kilo-code
       {"\n"}
@@ -30,7 +30,7 @@ const terminalContent = {
   ),
   firstTask: (
     <>
-      <span className="terminal-comment"># Start a new task with Kilo Code</span>
+      <span className="terminal-comment"># Start a new task with LingInk Agent</span>
       {"\n"}
       <span className="terminal-prompt">$</span> kilo "Create a React component for a user profile"
       {"\n"}
@@ -91,7 +91,7 @@ const terminalContent = {
 const categories = [
   {
     title: "Get Started",
-    description: "Install Kilo Code and get up and running in minutes",
+    description: "Install LingInk Agent and get up and running in minutes",
     href: "/getting-started",
     icon: (
       <svg className="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -106,7 +106,7 @@ const categories = [
   },
   {
     title: "Code with AI",
-    description: "Learn how to use Kilo Code to write, edit, and understand code",
+    description: "Learn how to use LingInk Agent to write, edit, and understand code",
     href: "/code-with-ai",
     icon: (
       <svg className="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -210,7 +210,7 @@ const categories = [
   },
   {
     title: "Contributing",
-    description: "Help improve Kilo Code and learn about its architecture",
+    description: "Help improve LingInk Agent and learn about its architecture",
     href: "/contributing",
     icon: (
       <svg className="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -237,7 +237,7 @@ export default function HomePage() {
   return (
     <div className="homepage">
       <Head>
-        <title>Kilo Code Docs: Setup, Models, MCP, Custom Modes & CLI</title>
+        <title>LingInk Agent Docs: Setup, Models, MCP, Custom Modes & CLI</title>
       </Head>
       {/* Dotted background pattern */}
       <div className="dot-pattern" />
@@ -252,7 +252,7 @@ export default function HomePage() {
           </p>
           <div className="hero-buttons">
             <Link href="/getting-started" className="btn btn-primary">
-              Get started with Kilo Code →
+              Get started with LingInk Agent →
             </Link>
             <Link href="/kiloclaw/overview" className="btn btn-secondary">
               Explore KiloClaw
@@ -263,7 +263,7 @@ export default function HomePage() {
         {/* Quick Links Panel - Stripe style */}
         <div className="quick-panel">
           <div className="quick-section">
-            <h3 className="quick-title">KILO CODE</h3>
+            <h3 className="quick-title">LingInk Agent</h3>
             <div className="quick-links">
               <Link href="/getting-started/installing" className="quick-link">
                 Installation Guide
@@ -348,7 +348,7 @@ export default function HomePage() {
       <section className="terminal-section">
         <div className="terminal-intro">
           <h2 className="section-title">Try it out</h2>
-          <p className="terminal-description">Get started quickly with Kilo Code, KiloClaw, and Kilo Gateway</p>
+          <p className="terminal-description">Get started quickly with LingInk Agent, KiloClaw, and Kilo Gateway</p>
         </div>
         <div className="terminal-container">
           <div className="terminal-tabs">

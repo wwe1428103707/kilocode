@@ -16,7 +16,7 @@ export const LLMGatewayPlugin = PluginV2.define({
           evt.provider.update(item.provider.id, (provider) => {
             provider.options.headers["HTTP-Referer"] = "https://kilo.ai/" // kilocode_change
             // kilocode_change start
-            provider.options.headers["X-Title"] = "Kilo Code"
+            provider.options.headers["X-Title"] = "LingInk Agent"
             provider.options.headers["X-Source"] = "kilo"
             // kilocode_change end
           })

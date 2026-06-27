@@ -13,7 +13,7 @@ export const VercelPlugin = PluginV2.define({
           if (item.provider.id !== ProviderV2.ID.make("vercel")) continue // kilocode_change
           evt.provider.update(item.provider.id, (provider) => {
             provider.options.headers["http-referer"] = "https://kilo.ai/" // kilocode_change
-            provider.options.headers["x-title"] = "Kilo Code" // kilocode_change
+            provider.options.headers["x-title"] = "LingInk Agent" // kilocode_change
           })
         }
       }),

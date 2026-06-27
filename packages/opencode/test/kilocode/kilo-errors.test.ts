@@ -97,7 +97,7 @@ describe("isKiloError", () => {
     expect(isKiloError(error)).toBe(true)
   })
 
-  it("returns false for regular 429 errors without Kilo code", () => {
+  it("returns false for regular 429 errors without LingInk Agent", () => {
     const error = makeAPIError({
       statusCode: 429,
       isRetryable: true,

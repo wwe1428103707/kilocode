@@ -15,7 +15,7 @@ const NAMES = [
   "Commit Message",
   "Experimental",
   "Language",
-  "About Kilo Code",
+  "About LingInk Agent",
 ]
 
 function story(page: Page) {

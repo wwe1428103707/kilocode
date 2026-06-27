@@ -1,5 +1,5 @@
 /**
- * legacy-migration - Types for legacy Kilo Code extension (v5.x) data structures.
+ * legacy-migration - Types for legacy LingInk Agent extension (v5.x) data structures.
  *
  * These types represent the shapes stored in VS Code SecretStorage and on disk
  * by the legacy extension (kilocode.kilo-code v5.x, a Roo Code fork).

@@ -32,7 +32,7 @@ describe("ZenmuxPlugin", () => {
         })
       })
       const result = yield* catalog.provider.get(ProviderV2.ID.make("zenmux"))
-      expect(result.options.headers).toEqual({ "HTTP-Referer": "https://kilo.ai/", "X-Title": "Kilo Code" })
+      expect(result.options.headers).toEqual({ "HTTP-Referer": "https://kilo.ai/", "X-Title": "LingInk Agent" })
       expect(Object.keys(result.options.headers).sort()).toEqual(["HTTP-Referer", "X-Title"])
     }),
   )
@@ -57,7 +57,7 @@ describe("ZenmuxPlugin", () => {
       expect((yield* catalog.provider.get(ProviderV2.ID.make("zenmux"))).options.headers).toEqual({
         Existing: "value",
         "HTTP-Referer": "https://kilo.ai/",
-        "X-Title": "Kilo Code",
+        "X-Title": "LingInk Agent",
       })
     }),
   )
